@@ -148,7 +148,7 @@ video {
   cursor: pointer !important;
   position: relative;
   transition: color 0.8s ease-in-out;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
 }
 .button_border__bottom__9uMyC:hover {
   color: #d61818;

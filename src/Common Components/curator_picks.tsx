@@ -84,7 +84,7 @@ const Curator_picks = () => {
                 {/* Button */}
                 <div className="flex  flex-row gap-4 justify-center items-center">
                   <button
-                    className={`button_border__bottom__9uMyC  !font-normal text-[16px] leading-4  
+                    className={`button_border__bottom__9uMyC  !font-normal text-[16px] leading-4  border-b border-black 
                     }`}
                     // onClick={() => toggleLike(iteam.id)}
                   >
