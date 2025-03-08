@@ -7,35 +7,35 @@ import { IoIosArrowRoundDown } from "react-icons/io";
 const Hero_card = () => {
   const [playing, setPlaying] = useState(false);
   const [animate, setAnimate] = useState(false);
+  const [padding, setPadding] = useState(0); // Initial padding
+  const [buttonPosition, setButtonPosition] = useState({ bottom: 5, left: 6 }); 
+
+
+  // video play when page refresh and text animation
   useEffect(() => {
     setPlaying(true);
     setAnimate(true);
   }, []);
-  const [padding, setPadding] = useState(0); // Initial padding
-  const [buttonPosition, setButtonPosition] = useState({ bottom: 5, left: 6 }); 
+
+// set padding , bottom, left accrding to scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-
       // Adjust padding with a max of 40
       const newPadding = Math.min(scrollY / 10, 40); // Set a maximum padding of 40
       setPadding(newPadding);
-
       // Adjust button's bottom position and left position with linear increase
       const newBottom = Math.min(scrollY / 10, 50); // Linear increase in bottom position based on scroll
       const newLeft = Math.min(15 + scrollY / 20, 40); // Linear increase in left position based on scroll
       setButtonPosition({ bottom: newBottom, left: newLeft });
     };
-
     // Attach the scroll event listener
     window.addEventListener("scroll", handleScroll);
-
     // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   return (
     <>
@@ -48,8 +48,6 @@ const Hero_card = () => {
             alt="Mobile Banner"
             className="block sm:hidden  opacity-40 h-full object-cover"
           />
-
-       
             <ReactPlayer
               url={iteam.video_url}
               playing={playing}
@@ -59,9 +57,9 @@ const Hero_card = () => {
               height="100%"
               controls={false}
               className="hidden sm:block"
-             // Hide default controls
+           
             />
-          
+            {/* // text on video  */}
             <div className={`absolute ${animate? "animate" : ""}  inset-0 flex  flex-col items-center justify-center`}>
               <div className="flex items-center justify-center flex-col gap-[30px] ">
                 <h1 className="text-white text-[24px] text-center tracking-[0.14em] xl:text-[40px] xl:leading-[54px] font-medium uppercase xl:tracking-[0.58em] ">
@@ -84,7 +82,6 @@ const Hero_card = () => {
               style={{
                 bottom: `${buttonPosition.bottom}px`,
                 left: `${buttonPosition.left}px`,
-                // backgroundColor: "rgba(0, 0, 0, 0.5)",
                 borderRadius: "50%",
                 padding: "10px",
               }}

@@ -4,17 +4,17 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const Curator_picks = () => {
   const [likedCards, setLikedCards] = useState<{ [key: number]: boolean }>({});
-
-
-  const toggleLike = (cardId:number) => {
+  const [loading, setLoading] = useState(true);
+  
+//card like handle
+  const toggleLike = (cardId: number) => {
     setLikedCards((prevState) => ({
       ...prevState,
       [cardId]: !prevState[cardId], // Toggle the liked state of this specific card
     }));
   };
 
-  const [loading, setLoading] = useState(true);
-
+// card initial loader
   useEffect(() => {
     // Set loading to false after 2 seconds
     const timer = setTimeout(() => {
@@ -42,42 +42,33 @@ const Curator_picks = () => {
             >
               {/* Heart Icon Button */}
               <div className="w-full flex justify-end mb-[24px]">
-                <div className="cursor-pointer text-xl" onClick={() => toggleLike(iteam.id)}>
-                  {isLiked ? <FaHeart  /> : <FaRegHeart />}
+                <div
+                  className="cursor-pointer text-xl"
+                  onClick={() => toggleLike(iteam.id)}
+                >
+                  {isLiked ? <FaHeart /> : <FaRegHeart />}
                 </div>
               </div>
 
               {/* Card Content */}
-              {/* <div className="relative w-full h-full grid justify-items-center items-center">
+              <div className="relative w-full h-full grid flex justify-items-center items-center">
                 <a
                   href=""
-                  className="max-w-[162px] sm:max-w-[200px] xl:max-w-[268px] sm:w-full min-h-[211px] max-h-[300px] inline-block justify-items-center place-content-center relative"
+                  className="max-w-[162px] sm:max-w-[200px] xl:max-w-[268px] sm:w-full min-h-[211px] max-h-[300px] inline-block flex justify-center items-center place-content-center relative"
                 >
-                  <img
-                    src={iteam.img_url}
-                    alt={iteam.card_title}
-                    className="object-contain opacity-100 transition-opacity duration-1000 min-w-full max-w-full sm:max-w-full max-h-[211px] sm:max-h-[300px] md:w-auto xl:w-full h-full"
-                  />
+                  {loading ? (
+                    <div className="flex justify-center">
+                      <div className="w-full  flex justify-center items-center h-full bg-gray-200  loader"></div>
+                    </div>
+                  ) : (
+                    <img
+                      src={iteam.img_url}
+                      alt={iteam.card_title}
+                      className="object-contain opacity-100 transition-opacity duration-1000 min-w-full max-w-full sm:max-w-full max-h-[211px] sm:max-h-[300px] md:w-auto xl:w-full h-full"
+                    />
+                  )}
                 </a>
-              </div> */}
-               <div className="relative w-full h-full grid flex justify-items-center items-center">
-      <a
-        href=""
-        className="max-w-[162px] sm:max-w-[200px] xl:max-w-[268px] sm:w-full min-h-[211px] max-h-[300px] inline-block flex justify-center items-center place-content-center relative"
-      >
-        {loading ? (
-          <div className="flex justify-center">
-          <div className="w-full  flex justify-center items-center h-full bg-gray-200  loader"></div> 
               </div>
-        ) : (
-          <img
-            src={iteam.img_url}
-            alt={iteam.card_title}
-            className="object-contain opacity-100 transition-opacity duration-1000 min-w-full max-w-full sm:max-w-full max-h-[211px] sm:max-h-[300px] md:w-auto xl:w-full h-full"
-          />
-        )}
-      </a>
-    </div>
 
               {/* Card Text */}
               <div className="flex mt-8 flex-col gap-[30px]">
@@ -97,7 +88,7 @@ const Curator_picks = () => {
                     }`}
                     // onClick={() => toggleLike(iteam.id)}
                   >
-                   {  iteam.btn_text}
+                    {iteam.btn_text}
                   </button>
                 </div>
               </div>

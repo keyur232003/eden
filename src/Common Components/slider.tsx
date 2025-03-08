@@ -54,64 +54,67 @@ const logos = [
 ];
 
 const InfiniteSlider = () => {
+  // Slider settings
   var setting = {
-    dots: false,
-    infinite: true,
-    speed: 4000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    arrows: false,
-     cssEase: 'linear',
+    dots: false, // Disable navigation dots
+    infinite: true, // Enable infinite scrolling
+    speed: 4000, // Animation speed in milliseconds
+    autoplay: true, // Enable automatic scrolling
+    autoplaySpeed: 0, // Continuous scrolling effect
+    slidesToShow: 8, // Number of slides visible at once
+    slidesToScroll: 1, // Number of slides to scroll per transition
+    arrows: false, // Hide navigation arrows
+    cssEase: 'linear', // Smooth linear transition for seamless effect
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // Tablet screens
         settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
-          infinite: false,
-          dots: false,
+          infinite: false, // Disable infinite scrolling for better UX
+          dots: false, // Keep dots hidden
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 600, // Smaller tablets and large mobile screens
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 480, // Small mobile screens
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
-      // You can unslick at a given breakpoint now by adding:
+      // To disable slider at a breakpoint, use:
       // settings: "unslick"
-      // instead of a settings object
     ],
   };
 
   return (
     <section className="pt-10 w-full bg-white overflow-hidden">
-      <h1 className="text-[22px] md:text-4xl leading-7 md:leading-[54px] font-medium tracking-[0.22em]  md:tracking-[0.55em] noto__serif-font uppercase text-center !font-medium !text-2xl !leading-[32px] !tracking-[0.2em]">
+      {/* Section Title */}
+      <h1 className="text-[22px] md:text-4xl leading-7 md:leading-[54px] font-medium tracking-[0.22em] md:tracking-[0.55em] noto__serif-font uppercase text-center !font-medium !text-2xl !leading-[32px] !tracking-[0.2em]">
         In The Press
       </h1>
+
       <div className="pt-10 pb-20 lg:pb-[112px]">
-        <Slider {...setting} className=" w-full flex justify-center iteam-center ">
-          {/* Duplicate logos to create seamless loop */}
+        {/* Slider Component */}
+        <Slider {...setting} className="w-full flex justify-center items-center">
+          {/* Render logos dynamically */}
           {logos?.map((logo, index) => (
-          <div key={index} className="flex justify-center  items-center">
-            <div key={index} className="">
-              <img
-                src={logo}
-                alt={`Press logo ${index}`}
-                className="w-[45px] h-[45px] object-contain"
-              />
+            <div key={index} className="flex justify-center items-center">
+              <div>
+                <img
+                  src={logo}
+                  alt={`Press logo ${index}`}
+                  className="w-[45px] h-[45px] object-contain"
+                />
+              </div>
             </div>
-          </div>
           ))}
         </Slider>
       </div>

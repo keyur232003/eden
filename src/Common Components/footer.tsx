@@ -8,43 +8,38 @@ import {
 } from "../json/footer";
 import { TextField } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
-import AccordionActions from "@mui/material/AccordionActions";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  
   return (
     <footer className="bg-black md:p-[24px] lg:p-0 w-full text-white">
       <div className="footer_container">
         <div className="flex flex-col md:flex-row pt-[60px] justify-between gap-10 xl:gap-0 w-full ">
           {footer.map((iteam) => {
             return (
-            
-                <div
-                  key={iteam.id}
-                  className="flex flex-col gap-5 md:gap-6 w-full xl:w-max  border-b-[0.5px] border-opacity-50 md:border-none border-[#FFFFFF] pb-6 md:pb-0 px-6 md:px-0"
-                >
-                  <h1 className="text-white  text-[22px] md:text-2xl leading-7 md:leading-8 text-center md:text-left font-medium tracking-widest">
-                    {iteam.label}
-                  </h1>
-                  <p className="text-base leading-5 font-normal text-white  text-center md:text-left  max-w-full md:max-w-[450px] rund__text-font">
-                    {iteam.des}
-                  </p>
-                  <div className="flex md:hidden justify-center  items-center font-medium w-full mt-1 rund__text-font">
-                    <button className="button_border__APW1D !px-5 !sm:px-14  hover:!bg-white hover:!text-black cursor-pointer">
-                      {iteam?.res_btn_txt}
-                    </button>
-                  </div>
+              <div
+                key={iteam.id}
+                className="flex flex-col gap-5 md:gap-6 w-full xl:w-max  border-b-[0.5px] border-opacity-50 md:border-none border-[#FFFFFF] pb-6 md:pb-0 px-6 md:px-0"
+              >
+                <h1 className="text-white  text-[22px] md:text-2xl leading-7 md:leading-8 text-center md:text-left font-medium tracking-widest">
+                  {iteam.label}
+                </h1>
+                <p className="text-base leading-5 font-normal text-white  text-center md:text-left  max-w-full md:max-w-[450px] rund__text-font">
+                  {iteam.des}
+                </p>
+                <div className="flex md:hidden justify-center  items-center font-medium w-full mt-1 rund__text-font">
+                  <button className="button_border__APW1D !px-5 !sm:px-14  hover:!bg-white hover:!text-black cursor-pointer">
+                    {iteam?.res_btn_txt}
+                  </button>
                 </div>
-              
+              </div>
             );
           })}
-
+          {/* mobile menu Accordion */}
           <div className=" md:hidden flex flex-col gap-4">
             <Accordion
               sx={{
@@ -96,7 +91,7 @@ const Footer = () => {
                         return (
                           <>
                             <li className="text-[#FFFFFF] cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
-                            <Link to="#" >{res}</Link>
+                              <Link to="#">{res}</Link>
                             </li>
                           </>
                         );
@@ -154,7 +149,7 @@ const Footer = () => {
                         return (
                           <>
                             <li className="text-[#FFFFFF] cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
-                            <Link to="#" >{res}</Link>
+                              <Link to="#">{res}</Link>
                             </li>
                           </>
                         );
@@ -212,7 +207,7 @@ const Footer = () => {
                         return (
                           <>
                             <li className="text-[#FFFFFF] cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
-                              <Link to="#" >{res}</Link>
+                              <Link to="#">{res}</Link>
                             </li>
                           </>
                         );
@@ -223,6 +218,8 @@ const Footer = () => {
               </AccordionDetails>
             </Accordion>
           </div>
+
+          {/* user Form  */}
           <div className="hidden md:flex  flex-col gap-10 lg:gap-[72px] max-w-[650px] xl:max-w-full xl:w-[595px] w-full">
             <form>
               <div>
@@ -352,7 +349,7 @@ const Footer = () => {
                       id=""
                       className="custom-checkbox hook-form_input__4skZs !w-[16px] !h-[16px] !rounded-[2px] !bg-white "
                     />
-                    <div className="flex flex-col justify-center items-start max-w-[286px]">               
+                    <div className="flex flex-col justify-center items-start max-w-[286px]">
                       <p className="text-sm leading-4 font-normal text-[#FFFFFF] rund__text-font">
                         Sign Up For Updates
                       </p>
@@ -364,7 +361,10 @@ const Footer = () => {
                     </div>
                   </div>
                   <div className="w-full md:w-max">
-                    <button className="button_border__APW1D w-full cursor-pointer rund__text-font hover:!bg-white hover:!text-black transition-all ease duration-500" type="button">
+                    <button
+                      className="button_border__APW1D w-full cursor-pointer rund__text-font hover:!bg-white hover:!text-black transition-all ease duration-500"
+                      type="button"
+                    >
                       Submit
                     </button>
                   </div>
@@ -373,6 +373,7 @@ const Footer = () => {
             </form>
           </div>
         </div>
+        {/* footer detailes  */}
         <div className="pt-9 md:pt-[52px] pb-7  flex flex-col gap-9 w-full">
           <div className="flex flex-col md:grid grid-cols-3 gap-y-0 md:gap-y-10  lg:gap-y-0 lg:grid-cols-5">
             <a href="">
@@ -432,7 +433,7 @@ const Footer = () => {
                         return (
                           <>
                             <li className="text-[#FFFFFF] border-b w-max text-sm  leading-4 font-medium footer__link-animation">
-                            <Link to={iteam?.path}>{res}</Link>
+                              <Link to={iteam?.path}>{res}</Link>
                             </li>
                           </>
                         );
@@ -457,7 +458,7 @@ const Footer = () => {
                         return (
                           <>
                             <li className="text-[#FFFFFF] border-b w-max text-sm  leading-4 font-medium footer__link-animation">
-                            <Link to={iteam?.path}>{res}</Link>
+                              <Link to={iteam?.path}>{res}</Link>
                             </li>
                           </>
                         );
@@ -482,7 +483,7 @@ const Footer = () => {
                         return (
                           <>
                             <li className="text-[#FFFFFF] border-b w-max text-sm  leading-4 font-normal footer__link-animation">
-                            <Link to={iteam?.path}>{res}</Link>
+                              <Link to={iteam?.path}>{res}</Link>
                             </li>
                           </>
                         );
@@ -494,6 +495,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        {/* copy rights  */}
         <div className="text-[#FFFFFF] w-full text-center text-xs sm:text-sm md:text-base leading-4 md:leading-5 font-normal rund__text-font mb-6">
           <p>Copyright © 2025 EDEN Gallery. All Rights Reserved </p>
         </div>
