@@ -7,11 +7,11 @@ import { IoClose } from "react-icons/io5";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [nav_hide, setNav_hide] = useState(true);
+  // scroll Hide navbar 
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".fixed-navbar") as HTMLElement; // Cast to HTMLElement
       if (navbar) {
-        console.log('window.scrollY', window.scrollY)
         // Check if navbar is not null
         if (window.scrollY > 400) {
           setNav_hide(false); // Hide the navbar by moving it above the screen
@@ -28,6 +28,8 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // mobile navbar open then background scroll off
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden"; // Disable scrolling
