@@ -1,32 +1,33 @@
 @import "tailwindcss";
-*{
+* {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 .slick-slider {
-    display: flex;
-  }
- 
-  .slick-track{
-    display: flex;
-    flex-direction: row;
-    /* width: 100% */
-    width: 4074px;
-    height: 45px;
-  }
-  .slick-list{
-    width: 100%;
-    display: flex;
-  }
-  .slick-arrow {
-    display: none;
-  }
-  .slick-prev{
-    display: none;
-  }
-  .slick-slide{
-    display: flex;
-    justify-content: center !important;
-    align-items: center;
-    width: 45px  ;
-    height: 45px;
-  }
+  display: flex;
+}
+
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  /* width: 100% */
+  width: 4074px;
+  height: 45px;
+}
+.slick-list {
+  width: 100%;
+  display: flex;
+}
+.slick-arrow {
+  display: none;
+}
+.slick-prev {
+  display: none;
+}
+.slick-slide {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
