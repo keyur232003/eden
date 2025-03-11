@@ -28,7 +28,6 @@ const Home = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <Navbar />
         <Hero_card />
         <Curator_picks />
         <Art_words_section />
@@ -39,7 +38,7 @@ const Home = () => {
         <News_letter />
         <Art_advisory_banner />
         <InfiniteSlider />
-        <Footer />
+     
       </div>
     </>
   );

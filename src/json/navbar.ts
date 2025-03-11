@@ -1,7 +1,7 @@
 export const navbar_data = [
   {
     title: "EDEN GALLERY",
-    path:"./artwork",
+    path:"/",
     // navbar_item: ["Artworks","Inspire Me", "Artists", "Galleries", "Exhibitions & Events","Magazine","About","Contact" ],
     btn_text: "Inquire",
     navbar_item: [
@@ -13,37 +13,37 @@ export const navbar_data = [
       {
         id: 2,
         label: "Inspire Me",
-        path: "/artworks",
+        path: "/inspire_me",
       },
       {
         id: 3,
         label: "Artists",
-        path: "/artworks",
+        path: "/artists",
       },
       {
         id: 4,
         label: "Galleries",
-        path: "/artworks",
+        path: "/galleries",
       },
       {
         id: 5,
         label: "Exhibitions & Events",
-        path: "/artworks",
+        path: "/event-exhibitions",
       },
       {
         id: 6,
         label: "Magazine",
-        path: "/artworks",
+        path: "/magazine",
       },
       {
         id: 7,
         label: "About",
-        path: "/artworks",
+        path: "/about",
       },
       {
         id: 8,
         label: "Contact",
-        path: "/artworks",
+        path: "/contact-us",
       },
     ],
   },

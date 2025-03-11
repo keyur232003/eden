@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { navbar_data } from "../json/navbar";
 import { FaRegHeart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
-import { Link, Links, Outlet } from "react-router-dom";
+import { Link, Links, Outlet, useLocation } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [nav_hide, setNav_hide] = useState(true);
-  // scroll Hide navbar 
+  const location = useLocation();
+  console.log("pathName", location);
+  // scroll Hide navbar
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".fixed-navbar") as HTMLElement; // Cast to HTMLElement
@@ -16,7 +18,7 @@ const Navbar = () => {
         if (window.scrollY > 400) {
           setNav_hide(false); // Hide the navbar by moving it above the screen
         } else {
-          setNav_hide(true) ;// Show the navbar when the scroll is above 800px
+          setNav_hide(true); // Show the navbar when the scroll is above 800px
         }
       }
     };
@@ -41,27 +43,44 @@ const Navbar = () => {
       document.body.style.overflow = "auto"; // Cleanup on unmount
     };
   }, [menuOpen]);
+
+  const navTextColor = location.pathname === "/";
+
   return (
     <>
       {navbar_data?.map((iteam, idx) => {
         return (
           <div
             key={idx}
-            className={`flex fixed-navbar ${nav_hide ? "block" : "hidden"} flex-col  text-white justify-center  items-center z-[99999] max-w-[1332px] pt-5 px-8 w-[95%] lg:w-full`}
+            className={`flex ${
+              navTextColor ? "fixed-navbar" : "fixed top-0 "
+            } ${
+              nav_hide ? "block" : "hidden"
+            } flex-col w-full justify-center  text-${
+              navTextColor ? "white" : "black"
+            } justify-center  items-center z-[99999] ${
+              navTextColor ? "" : " bg-white "
+            }   pt-5 px-8 w-[95%] lg:w-full bg-tr p-2`}
           >
             {/* Navbar Header */}
-            <div className="flex justify-between xl:justify-center items-center w-full">
+            <div className="flex max-w-[1332px] justify-between xl:justify-center items-center w-full">
               {/* Hamburger Icon */}
               <button
-                className="xl:hidden text-[20px] cursor-pointer text-white text-2xl"
+                className={`xl:hidden text-[20px] cursor-pointer text-${
+                  navTextColor ? "white" : "black"
+                } text-2xl`}
                 onClick={() => setMenuOpen(!menuOpen)}
               >
                 {menuOpen ? <FaTimes /> : <FaBars />}
               </button>
 
               {/* Navbar Title */}
-              <a className="text-[20px] cursor-pointer">{iteam?.title}</a>
-              <div className="xl:hidden text-white text-2xl">
+              <Link to={iteam?.path} className="text-[20px] cursor-pointer">{iteam?.title}</Link>
+              <div
+                className={`xl:hidden text-${
+                  navTextColor ? "white" : "black"
+                } text-2xl`}
+              >
                 <a href="">
                   <FaRegHeart className="size-6" />
                 </a>
@@ -70,7 +89,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Navbar Menu */}
-            <div className="hidden xl:flex w-full justify-between items-end gap-20 pt-[10px]">
+            <div className="hidden max-w-[1332px] xl:flex w-full justify-between items-end gap-20 pt-[10px]">
               <div className="hover:underline">
                 <button className="flex items-center gap-2 cursor-pointer ">
                   <FaSearch />
@@ -79,14 +98,32 @@ const Navbar = () => {
               </div>
               <div className="w-full">
                 <ul className="flex justify-between w-full items-end gap-10">
-                  {iteam?.navbar_item.map((res) => (
-                    <li key={res?.id}>
-                      <Link to={res?.path} className="cursor-pointer button_border__bottom__9uMyC">
-                        {res?.label}
-                      </Link>
-                    </li>
-                  ))}
-                  <button className="button_background__white__3rYfs hover:bg-[#080605] hover:text-white transition-all ease-in-out duration-500">
+                  {iteam?.navbar_item.map((res) => {
+                    const isActive = location?.pathname === res?.path;
+                    console.log("res?.path", res?.path);
+                    console.log("location?.pathname", location?.pathname);
+                    return (
+                      <li key={res?.id}>
+                        <Link
+                          to={res?.path}
+                          style={{
+                            color: isActive ? "#d61818" : "",
+                            textDecoration: isActive ? "underline" : "none",
+                            textDecorationColor: isActive ? "#d61818" : "transparent",
+                            textUnderlineOffset: "4px", // Adjust the gap between text and underline
+                          }}
+                          className={`cursor-pointer button_border__bottom__9uMyC `}
+                        >
+                          {res?.label}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                  <button
+                    className={`button_background__white__3rYfs ${
+                      navTextColor ? "!bg-white" : "!bg-black !text-white"
+                    }  hover:bg-[#080605] hover:text-white transition-all ease-in-out duration-500`}
+                  >
                     {iteam.btn_text}
                   </button>
                   <a href="">
@@ -105,7 +142,7 @@ const Navbar = () => {
               <div className="p-5 flex flex-col items-center gap-5 w-full">
                 {/* Close Button */}
                 <button
-                  className="text-white cursor-pointer text-2xl self-end"
+                  className={`text-white cursor-pointer text-2xl self-end`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {/* <FaTimes /> */}
