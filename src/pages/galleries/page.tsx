@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../Common Components/navbar";
 import { gallery_data } from "../../json/galleryPage";
 import Accordion from "@mui/material/Accordion";
@@ -13,22 +13,32 @@ import { GoArrowUpRight } from "react-icons/go";
 import { Link, useLocation } from "react-router-dom";
 const Page = () => {
   const pathName = useLocation();
+    useEffect(() => {
+      window.scroll({
+        top: 0,
+        // left: 0,
+        behavior: "smooth", // Optional: makes the scroll smooth
+      });
+      // console.log("test");
+    }, [pathName]);
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex flex-col justify-center">
       <div className="mt-[105px]  w-[95%] mx-auto my-0">
         {gallery_data.map((iteam) => (
           <div
             key={iteam?.id}
-            className=" mt-4 flex flex-col items-center w-full mx-auto my-0"
+            
+            className=" mt-9 flex flex-col items-center w-full mx-auto my-0"
           >
             {/* Title Section */}
             <div className="flex flex-col items-center">
               <h1 className="noto__serif-font order-1  text-2xl leading-[32px] md:text-[40px] font-medium lg:leading-[54px] tracking-[0.56em] text-center uppercase">
                 {iteam?.title}
               </h1>
-              <p className="mt-2 md:mt-[56px] max-w-[700px] mb-[40px] md:mb-0 order-3 md:order-2 rund__text-font text-base font-light leading-[19px] text-center">
+                <p
+                className="mt-2 md:mt-[56px] max-w-[700px] mb-[40px] md:mb-0 order-3 md:order-2 font-normal leading-[19px] text-center">
                 {iteam.des}
-              </p>
+                </p>
               {/* Image Section */}
               <div className="max-w-[1250px] order-2 md:order-3 w-full my-0 mx-auto">
                 <div className="my-[33px]">
@@ -40,7 +50,7 @@ const Page = () => {
             <div className="max-w-[1250px] w-full my-0 mx-auto">
               <div className="border-y border-[black] ">
                 <div className="pt-[49px] pb-[33px] max-w-[856px] mx-auto my-0 text-center flex flex-wrap justify-center gap-3">
-                  {iteam?.iteam.map((res) => (
+                  {iteam?.iteam.map((res,index) => (
                     <React.Fragment key={res?.id}>
                       <div className="hidden md:block">
                         <a
@@ -53,10 +63,15 @@ const Page = () => {
                               ? res?.img_gallery.length
                               : ""}
                           </sup>
+                          
                         </a>
-                        <span className="text-2xl font-medium leading-[32px] tracking-[0.08em]">
-                          /
-                        </span>
+                        {index !== iteam?.iteam.length - 1 ? (
+                          <span className="text-2xl font-medium leading-[32px] tracking-[0.08em]">
+                            /
+                          </span>
+                        ) : (
+                          ""
+                        )}
                       </div>
                       <div className="md:hidden w-full">
                         <Accordion>
@@ -97,7 +112,7 @@ const Page = () => {
               {iteam?.iteam?.map((res) => (
                 <div
                   key={res?.id}
-                  className="pb-[36px] mb-[100px] pt-[37px] md:py-[100px] border-b border-[gray] scroll-mt-[100px]"
+                  className="  pt-[37px] md:py-[100px] border-b border-[gray] scroll-mt-[100px]"
                 >
                   <h1
                     id={`${res?.href}`}
@@ -142,7 +157,14 @@ const Page = () => {
                   </div>
                 </div>
               ))}
-              <div className="w-full py-8 border-t-1 ">
+           
+            </div>
+            
+          </div>
+        ))}
+         
+      </div>
+      <div className="w-full py-8 border-t-1 mt-[100px] ">
                 <div className="flex flex-row flex-wrap gap-2 max-w-[1200px] w-[90%] mx-auto">
                   <div className="text-sm flex items-center text-[#000000] leading-4 font-normal rund__text-font">
                     <Link to={"/"} className="flex justify-center items-center gap-2">
@@ -169,10 +191,6 @@ const Page = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };
