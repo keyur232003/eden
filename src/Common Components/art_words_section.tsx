@@ -20,10 +20,11 @@ const Art_words_section = () => {
             </div>
 
             {/* Links */}
-            <div className="flex flex-row flex-wrap gap-2 p-2 sm:gap-4 justify-center ">
+            <div className="flex min-w-[700px] max-w-[100px] flex-row flex-wrap gap-2 p-2 sm:gap-4 justify-center ">
               {iteam.description.map((res) => (
                 <div key={res.id}>
-                  <a href={res.path} className="font-light text-[20px] sm:text-[30px] xl:text-[40px] border-b border-white leading-[30px] xl:leading-[54px] noto__serif-font text-white">
+                  <a href={res.path} className="font-light button_border__bottom__9uMyC  
+                  text-[24px] md:text-[40px] border-b border-white leading-[30px] xl:leading-[54px] noto__serif-font text-white">
                     {res.label}
                   </a>
                 </div>

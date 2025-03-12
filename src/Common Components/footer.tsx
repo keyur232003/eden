@@ -90,7 +90,7 @@ const Footer = () => {
                       {iteam.data.map((res) => {
                         return (
                           <>
-                            <li className="text-[#FFFFFF] cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
+                            <li className="text-[#FFFFFF] button_border__bottom__9uMyC cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
                               <Link to="#">{res}</Link>
                             </li>
                           </>
@@ -148,7 +148,7 @@ const Footer = () => {
                       {iteam.data.map((res) => {
                         return (
                           <>
-                            <li className="text-[#FFFFFF] cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
+                            <li className="text-[#FFFFFF] button_border__bottom__9uMyC cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
                               <Link to="#">{res}</Link>
                             </li>
                           </>
@@ -206,7 +206,7 @@ const Footer = () => {
                       {iteam.data.map((res) => {
                         return (
                           <>
-                            <li className="text-[#FFFFFF] cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
+                            <li className="text-[#FFFFFF] button_border__bottom__9uMyC cursor-pointer border-b w-max text-sm  leading-4 font-medium footer__link-animation">
                               <Link to="#">{res}</Link>
                             </li>
                           </>
@@ -406,7 +406,7 @@ const Footer = () => {
                       {iteam.data.map((res) => {
                         return (
                           <>
-                            <li className="text-[#FFFFFF] border-b w-max text-sm  leading-4 font-medium footer__link-animation">
+                            <li className="text-[#FFFFFF] button_border__bottom__9uMyC border-b w-max text-sm  leading-4 font-medium footer__link-animation">
                               <Link to={iteam?.path}>{res}</Link>
                             </li>
                           </>
@@ -432,7 +432,7 @@ const Footer = () => {
                       {iteam.data.map((res) => {
                         return (
                           <>
-                            <li className="text-[#FFFFFF] border-b w-max text-sm  leading-4 font-medium footer__link-animation">
+                            <li className="text-[#FFFFFF] button_border__bottom__9uMyC border-b w-max text-sm  leading-4 font-medium footer__link-animation">
                               <Link to={iteam?.path}>{res}</Link>
                             </li>
                           </>
@@ -457,7 +457,7 @@ const Footer = () => {
                       {iteam.data.map((res) => {
                         return (
                           <>
-                            <li className="text-[#FFFFFF] border-b w-max text-sm  leading-4 font-medium footer__link-animation">
+                            <li className="text-[#FFFFFF] button_border__bottom__9uMyC border-b w-max text-sm  leading-4 font-medium footer__link-animation">
                               <Link to={iteam?.path}>{res}</Link>
                             </li>
                           </>
@@ -482,7 +482,7 @@ const Footer = () => {
                       {iteam.data.map((res) => {
                         return (
                           <>
-                            <li className="text-[#FFFFFF] border-b w-max text-sm  leading-4 font-normal footer__link-animation">
+                            <li className="text-[#FFFFFF] button_border__bottom__9uMyC border-b w-max text-sm  leading-4 font-normal footer__link-animation">
                               <Link to={iteam?.path}>{res}</Link>
                             </li>
                           </>
@@ -496,7 +496,7 @@ const Footer = () => {
           </div>
         </div>
         {/* copy rights  */}
-        <div className="text-[#FFFFFF] w-full text-center text-xs sm:text-sm md:text-base leading-4 md:leading-5 font-normal rund__text-font mb-6">
+        <div className="text-[#FFFFFF] p-8 w-full text-center text-xs sm:text-sm md:text-base leading-4 md:leading-5 font-normal rund__text-font mb-6">
           <p>Copyright © 2025 EDEN Gallery. All Rights Reserved </p>
         </div>
       </div>

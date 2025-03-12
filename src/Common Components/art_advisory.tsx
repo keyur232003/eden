@@ -15,14 +15,14 @@ const ArtAdvisory = () => {
                {/* Content Section */}
                <div className="relative flex flex-col justify-center items-center gap-[30px] z-10  max-w-[600px]">
                  <div className="flex items-center justify-center flex-col gap-[30px] ">
-                   <h1 className="text-white text-[30px] md:text-[40px] text-center tracking-[8px] sm:tracking-[20px] xl:text-[40px] xl:leading-[54px] font-medium uppercase xl:tracking-[0.58em]">
+                   <h1 className="text-white text-[24px] md:text-[40px] text-center tracking-[8px] sm:tracking-[20px] xl:text-[40px] xl:leading-[54px] font-medium uppercase xl:tracking-[0.58em]">
                      {iteam.title}
                    </h1>
                  </div>
      
                  {/* Links */}
                   <div className="flex flex-row flex-wrap gap-4 justify-center ">
-                  <p className="font-medium text-2xl leading-[32px] text-[20px] md:text-[40px] text-center noto__serif-font text-white">{iteam.description}</p>
+                  <p className="font-medium text-2xl leading-[32px] text-[24px]  text-center noto__serif-font text-white">{iteam.description}</p>
                  </div> 
      
                  {/* Button */}

@@ -41,8 +41,7 @@ export const gallery_data=[
                     card_description:"A sophisticated gallery in the heart of London’s Mayfair, surrounded by the elegance of the city's luxury shopping district.",
                     img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Flobby4.png&w=1080&q=100&dpl=dpl_HxzCEc85AtcyqmWnrmogy2d7sMe6"
                 }
-            ]},{
-                id:3,
+            ]},{ id:3,
                 iteam_title:"Miami",
                 href:"miami",
                 img_gallery:[
@@ -59,8 +58,7 @@ export const gallery_data=[
                         img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Flobby6.png&w=1080&q=100&dpl=dpl_HxzCEc85AtcyqmWnrmogy2d7sMe6"
                     }
                 ]
-            },{
-                id:4,
+            },{ id:4,
                 iteam_title:"Aspen",
                 href:"aspen",
                 img_gallery:[
@@ -71,8 +69,7 @@ export const gallery_data=[
                         img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Flobby7.png&w=1080&q=100&dpl=dpl_HxzCEc85AtcyqmWnrmogy2d7sMe6"
                     }
                 ]
-            },{
-                id:5,
+            },{ id:5,
                 iteam_title:"Las Vegas",
                 href:"lasVegas",
                 img_gallery:[
@@ -83,8 +80,7 @@ export const gallery_data=[
                         img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Flobby8.png&w=1080&q=100&dpl=dpl_HxzCEc85AtcyqmWnrmogy2d7sMe6"
                     }
                 ]
-            },{
-                id:6,
+            },{id:6,
                 iteam_title:"Dubai",
                 href:"dubai",
                 img_gallery:[
@@ -95,9 +91,7 @@ export const gallery_data=[
                         img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Flobby8.png&w=1080&q=100&dpl=dpl_HxzCEc85AtcyqmWnrmogy2d7sMe6"
                     }
                 ]
-            },{
-
-                id:7,
+            },{id:7,
                 iteam_title:"MALDIVES",
                 href:"maldives",
                 img_gallery:[
@@ -108,8 +102,7 @@ export const gallery_data=[
                         img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=https%3A%2F%2Fs3-alpha-sig.figma.com%2Fimg%2F1ead%2F2d4c%2F2549b45af740857a1b368e091ff3bc70%3FExpires%3D1740960000%26Key-Pair-Id%3DAPKAQ4GOSFWCW27IBOMQ%26Signature%3DoWISZF3QfjqUU~MsebvvfmE4QlsQoa53mpILPAUJBw-TbJuQa3K3~r-1cLPvNvM1liM0x0qQrO76~0IYzlD1JT20wI0pGwxIonGBuswlP4DtVZyreWpqmxYcfWURCwrYc6K0JrT1RVpV5BFHZ73su00qvv2fQdzqR0bOBTJJk-ayrUU91Zv-9V69hBFCfqOCJLpm88cfAAf-QIV06SOMvyWDv5DdEfvKImOR-lvmKETBlTXlohtilCMnJk2LD1Lq81cEmvm9zg7o1b7jYPZEbRgvAj4N06u4deG6qdgANc0B7iXWPirMrG3mVTinFaAn-G8vXHQVbyO8d2P2HIIpQA__&w=1080&q=100&dpl=dpl_HxzCEc85AtcyqmWnrmogy2d7sMe6"
                     }
                 ]
-            },{
-                id:8,
+            },{ id:8,
                 iteam_title:"Tel Aviv",
                 href:"tel_aviv",
                 img_gallery:[
