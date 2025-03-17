@@ -103,7 +103,7 @@ const InfiniteSlider = () => {
 
       <div className="pt-10 pb-20 lg:pb-[112px]">
         {/* Slider Component */}
-        <Slider {...setting} className="w-full flex justify-center items-center">
+        <Slider {...setting} className="w-full flex justify-center items-center inthepress_slider">
           {/* Render logos dynamically */}
           {logos?.map((logo, index) => (
             <div key={index} className="flex justify-center items-center">

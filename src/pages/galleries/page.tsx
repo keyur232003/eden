@@ -11,23 +11,23 @@ import Button from "@mui/material/Button";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link, useLocation } from "react-router-dom";
+import Path from "../../Common Components/path";
 const Page = () => {
   const pathName = useLocation();
-    useEffect(() => {
-      window.scroll({
-        top: 0,
-        // left: 0,
-        behavior: "smooth", // Optional: makes the scroll smooth
-      });
-      // console.log("test");
-    }, [pathName]);
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      // left: 0,
+      behavior: "smooth", // Optional: makes the scroll smooth
+    });
+    // console.log("test");
+  }, [pathName]);
   return (
     <div className="w-full flex flex-col justify-center">
       <div className="mt-[105px]  w-[95%] mx-auto my-0">
         {gallery_data.map((iteam) => (
           <div
             key={iteam?.id}
-            
             className=" mt-9 flex flex-col items-center w-full mx-auto my-0"
           >
             {/* Title Section */}
@@ -35,10 +35,9 @@ const Page = () => {
               <h1 className="noto__serif-font order-1  text-2xl leading-[32px] md:text-[40px] font-medium lg:leading-[54px] tracking-[0.56em] text-center uppercase">
                 {iteam?.title}
               </h1>
-                <p
-                className="mt-2 md:mt-[56px] max-w-[700px] mb-[40px] md:mb-0 order-3 md:order-2 font-normal leading-[19px] text-center">
+              <p className="mt-2 md:mt-[56px] max-w-[700px] mb-[40px] md:mb-0 order-3 md:order-2 font-normal leading-[19px] text-center">
                 {iteam.des}
-                </p>
+              </p>
               {/* Image Section */}
               <div className="max-w-[1250px] order-2 md:order-3 w-full my-0 mx-auto">
                 <div className="my-[33px]">
@@ -50,7 +49,7 @@ const Page = () => {
             <div className="max-w-[1250px] w-full my-0 mx-auto">
               <div className="border-y border-[black] ">
                 <div className="pt-[49px] pb-[33px] max-w-[856px] mx-auto my-0 text-center flex flex-wrap justify-center gap-3">
-                  {iteam?.iteam.map((res,index) => (
+                  {iteam?.iteam.map((res, index) => (
                     <React.Fragment key={res?.id}>
                       <div className="hidden md:block">
                         <a
@@ -63,7 +62,6 @@ const Page = () => {
                               ? res?.img_gallery.length
                               : ""}
                           </sup>
-                          
                         </a>
                         {index !== iteam?.iteam.length - 1 ? (
                           <span className="text-2xl font-medium leading-[32px] tracking-[0.08em]">
@@ -135,7 +133,7 @@ const Page = () => {
                   >
                     {res?.img_gallery.map((data, index) => (
                       <div key={index} className="scroll-mt-[100px]">
-                        <a href="">
+                        <a href={`/galleries/${data?.link}`}>
                           {" "}
                           <img
                             src={data?.img_url}
@@ -157,40 +155,38 @@ const Page = () => {
                   </div>
                 </div>
               ))}
-           
             </div>
-            
           </div>
         ))}
-         
       </div>
-      <div className="w-full py-8 border-t-1 mt-[100px] ">
-                <div className="flex flex-row flex-wrap gap-2 max-w-[1200px] w-[90%] mx-auto">
-                  <div className="text-sm flex items-center text-[#000000] leading-4 font-normal rund__text-font">
-                    <Link to={"/"} className="flex justify-center items-center gap-2">
-                      Eden Gallery{" "}
-                      <svg
-                        width="7px"
-                        height="15px"
-                        viewBox="0 0 5 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="text-[#000000] stroke-current"
-                      >
-                        <path
-                          d="M0.540695 7.18198L3.72266 4L0.540675 0.81802"
-                          stroke="black"
-                          className="text-[#000000] stroke-current"
-                        ></path>
-                      </svg>
-                    </Link>
-                  </div>
-                  <a className="capitalize text-sm text-[#000000] leading-4 font-normal rund__text-font">
-                    {" "}
-                    {pathName?.pathname?.slice(1)}
-                  </a>
-                </div>
-              </div>
+      {/* <div className="w-full py-8 border-t-1 mt-[100px] ">
+        <div className="flex flex-row flex-wrap gap-2 max-w-[1200px] w-[90%] mx-auto">
+          <div className="text-sm flex items-center text-[#000000] leading-4 font-normal rund__text-font">
+            <Link to={"/"} className="flex justify-center items-center gap-2">
+              Eden Gallery{" "}
+              <svg
+                width="7px"
+                height="15px"
+                viewBox="0 0 5 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-[#000000] stroke-current"
+              >
+                <path
+                  d="M0.540695 7.18198L3.72266 4L0.540675 0.81802"
+                  stroke="black"
+                  className="text-[#000000] stroke-current"
+                ></path>
+              </svg>
+            </Link>
+          </div>
+          <a className="capitalize text-sm text-[#000000] leading-4 font-normal rund__text-font">
+            {" "}
+            {pathName?.pathname?.slice(1)}
+          </a>
+        </div>
+      </div> */}
+      <Path pathname={pathName?.pathname} />
     </div>
   );
 };
