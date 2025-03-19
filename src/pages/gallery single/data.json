@@ -1,0 +1,39 @@
+{
+  "id": "1",
+  "name": "Art Opening 1",
+  "date": {
+    "d": "10",
+    "m": "02",
+    "y": "2021"
+  },
+  "city": "Creative City",
+  "country": "Country B",
+  "slug": "art-opening-1",
+  "type": "Opening",
+  "artists": [
+    {
+      "id": "1",
+      "name": "Artist 1"
+    },
+    {
+      "id": "2",
+      "name": "Artist 2"
+    },
+    {
+      "id": "3",
+      "name": "Artist 3"
+    }
+  ],
+  "galleries": [
+    {
+      "id": "2",
+      "name": "Creative Gallery"
+    }
+  ],
+  "rsvp": "Rsvp",
+  "imageVideo": {
+    "url": "https://s3-alpha-sig.figma.com/img/084b/c3a6/2c035cfac5df1c547429641e2fc7c9b7?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Qh29Ze93gXrVof0ma9N8axjUu2ZbPix8Z5sA1tE2lSVJrEf8PGJ0qT3XqPrADlTlv8TX29GU1y~8ZSwC20SE~teCdoOchmBL7Z1MmAds8a3k~ZfStTfK9Y4nq-XPI9Eesy06MW4BLzk6unNUr3gsuuf9OahpPnolw9htQdESZpHDtcdW~cAMCUav8pcHF2zG5MgakdNac1jcPK0uDQz7qGupetyc2zcoe1VlfsQ6225VPftGgRxbfyzunCbl21XZ1x-z8iZgVvGicf50Jr0wpx7MsDBsr9x6QELGo7iCQDnWnYhfeBNa-IDodu1YmarQJo16xpkUqOOeJzLhQJrSiA__",
+    "id": "2",
+    "type": "image"
+  }
+}

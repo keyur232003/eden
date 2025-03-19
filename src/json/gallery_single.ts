@@ -95,7 +95,7 @@ export const gallery_single_data = {
   section5:[{
     id:1,
     title:"Art Opening 2",
-    date:{d:"15",m:"03",y:"2022"},
+    date:{d:15,m:3,y:2022},
     location:"Creative City / Country B",
     img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
     artist_btn:"Artist 2",
@@ -104,7 +104,7 @@ export const gallery_single_data = {
   },{
     id:2,
     title:"Art Opening 2",
-    date:{d:"15",m:"03",y:"2022"},
+    date:{d:15,m:3,y:2022},
     location:"Creative City / Country B",
     img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
     artist_btn:"Artist 2",
@@ -113,7 +113,7 @@ export const gallery_single_data = {
   },{
     id:3,
     title:"Art Opening 2",
-    date:{d:"15",m:"03",y:"2022"},
+    date:{d:15,m:3,y:2022},
     location:"Creative City / Country B",
     img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
     artist_btn:"Artist 2",
@@ -122,7 +122,7 @@ export const gallery_single_data = {
   },{
     id:4,
     title:"Art Opening 2",
-    date:{d:"15",m:"03",y:"2023"},
+    date:{d:15,m:3,y:2023},
     location:"Creative City / Country B",
     img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
     artist_btn:"Artist 2",
@@ -131,7 +131,7 @@ export const gallery_single_data = {
   },{
     id:5,
     title:"Art Opening 2",
-    date:{d:"15",m:"03",y:"2023"},
+    date:{d:15,m:3,y:2023},
     location:"Creative City / Country B",
     img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
     artist_btn:"Artist 2",
@@ -140,7 +140,7 @@ export const gallery_single_data = {
   },{
     id:6,
     title:"Art Opening 2",
-    date:{d:"15",m:"03",y:"2023"},
+    date:{d:15,m:3,y:2023},
     location:"Creative City / Country B",
     img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
     artist_btn:"Artist 2",
@@ -149,7 +149,157 @@ export const gallery_single_data = {
   },{
     id:7,
     title:"Art Opening 2",
-    date:{d:"15",m:"03",y:"2024"},
+    date:{d:15,m:3,y:2024},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:8,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2019},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:9,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2019},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:10,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2020},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:11,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2021},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:12,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2021},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:13,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2024},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:14,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2025},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:15,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2025},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:16,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2026},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:17,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2026},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:18,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2027},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:19,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2028},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:20,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2029},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:21,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2029},
+    location:"Creative City / Country B",
+    img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
+    artist_btn:"Artist 2",
+    creative_Gallery:"Creative Gallery",
+    opening:"Opening"
+  },
+  {
+    id:22,
+    title:"Art Opening 2",
+    date:{d:15,m:3,y:2025},
     location:"Creative City / Country B",
     img_url:"https://eden-gallery-venture-motions-projects.vercel.app/_next/image?url=%2Fimages%2Ftimeline-1.png&w=640&q=75&dpl=dpl_9fgaRbewwmnxkewEJyVUckna63A8",
     artist_btn:"Artist 2",

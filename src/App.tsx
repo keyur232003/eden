@@ -4,7 +4,7 @@ import Home from "./pages/home/page";
 import { Route, Router, Routes } from "react-router-dom";
 import Navbar from "./Common Components/navbar";
 import Footer from "./Common Components/footer";
-import ArtWorks from "./pages/art works/page";
+import ArtWorks from "./pages/artworks/page";
 import InspireMe from "./pages/Inspire me/page";
 import Artists from "./pages/artists/page";
 import Galleries from "./pages/galleries/page";

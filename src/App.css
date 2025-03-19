@@ -1,8 +1,8 @@
-@import "tailwindcss";
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 .slick-slider {
   display: flex;
 }
@@ -12,9 +12,11 @@
   gap: 16px;
 
 }
+
 .slick-slid {
   width: 319px;
 }
+
 .inthepress_slider .slick-track {
   display: flex;
   flex-direction: row;
@@ -22,19 +24,28 @@
   height: 45px !important;
   gap: 0px !important;
 }
+
 .slick-list {
   overflow: hidden;
 }
+
 .slick-arrow {
   display: none;
 }
+
 .slick-prev {
   display: none;
 }
+
 .inthepress_slider .slick-slide {
   display: flex;
   justify-content: center !important;
   align-items: center;
   width: 45px;
   height: 45px;
+}
+
+.timeLine_slider .slick-track {
+  display: flex;
+  gap: 22px;
 }

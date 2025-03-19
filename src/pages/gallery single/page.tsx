@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Path from "../../Common Components/path";
+import SliderTimeline from './sliderTimeline'
+import Timeline from "./sliderTimeline";
 const page = () => {
  
   const settings = {
@@ -304,10 +306,10 @@ const page = () => {
         })}
       </section>
 
-      <section>
+      {/* <section>
         <div className="mt-7 border-t w-full">
           <div className="grid grid-cols-7 mt-[2px]">
-            {/* Loop to show previous 3, current, and next 3 years */}
+          
             {Array.from({ length: 7 }, (_, index) => {
               const year = selectedYear - 3 + index; // Generate years dynamically
               return (
@@ -346,26 +348,9 @@ const page = () => {
                   } 
                   ${adjustedYear == minYear ? "ml-[810px]" :""}
                    ${adjustedYear == maxYear ? "ml-[-470px]" :""}
-                
-                  //   adjustedYear ===
-                  //   Math.min(
-                  //     ...gallery_single_data?.section5.map((event) =>
-                  //       Number(event?.date?.y)
-                  //     )
-                  //   )
-                  //     ? "lg:ml-[680px]" // Apply left margin when selected year is the first
-                  //     : adjustedYear ===
-                  //       Math.max(
-                  //         ...gallery_single_data?.section5.map((event) =>
-                  //           Number(event?.date?.y)
-                  //         )
-                  //       )
-                  //     ? "lg:ml-[-480px]" // Apply negative left margin when selected year is the last
-                  //     : ""
-                  // }
 `}
                 >
-                  {/* Tag Buttons */}
+                
                   <div className="absolute top-0 right-0 2xl:right-[15%] flex justify-end flex-wrap p-4 z-10 space-x-2">
                     <span className="bg-[#F2F2F3] hover:bg-[#D61818] hover:text-white transition-all text-black noto__serif-font px-2 py-[2.5px] text-sm italic font-light leading-[19px] rounded-md cursor-pointer">
                       {event?.artist_btn}
@@ -378,14 +363,14 @@ const page = () => {
                     </span>
                   </div>
 
-                  {/* Image */}
+                 
                   <img
                     src={event?.img_url}
                     alt={event.title}
                     className="max-h-[210px] w-full max-w-[400px] max-w-[373px]"
                   />
 
-                  {/* Event Details */}
+                 
                   <div className="pt-[22px] md:pt-[24px] pb-[22px] md:pb-[50px] text-center">
                     <h3 className="noto__serif-font text-lg md:text-2xl italic font-medium md:leading-[32px] leading-[24px]">
                       {event?.title}
@@ -400,8 +385,11 @@ const page = () => {
             ))}
           </Slider>
         </div>
-      </section>
+      </section>  */}
 
+<section>
+  <Timeline eve/>
+</section>
        <Path pathname={pathName?.pathname} />
     </div>
   );
