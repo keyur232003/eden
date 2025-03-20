@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [nav_hide, setNav_hide] = useState(true);
   const location = useLocation();
-  console.log("pathName", location);
+
   // scroll Hide navbar
   useEffect(() => {
     const handleScroll = () => {
@@ -100,8 +100,7 @@ const Navbar: React.FC = () => {
                 <ul className="flex justify-between w-full items-end gap-10">
                   {iteam?.navbar_item.map((res) => {
                     const isActive = location?.pathname === res?.path;
-                    console.log("res?.path", res?.path);
-                    console.log("location?.pathname", location?.pathname);
+                   
                     return (
                       <li key={res?.id}>
                         <Link
