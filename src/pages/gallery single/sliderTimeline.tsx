@@ -1200,8 +1200,8 @@ const TimelineSlider = () => {
 
   return (
     <div className="timelineSlider">
-      <div className="timelineYearsNav">
-        <div className="grid grid-cols-7 mt-2">
+      <div className="timelineYearsNav border-t-1">
+        <div className="grid grid-cols-7 ">
           {Array.from({ length: 7 }, (_, index) => {
             const year = selectedYear - 3 + index;
             return (
